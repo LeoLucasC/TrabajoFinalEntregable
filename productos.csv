@@ -1,0 +1,60 @@
+id,nombre,precio,sexo,url
+1,Camiseta Básica,15.99,Hombre,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSpp0EKGodNFRgI-tQvLdwWWJhpoJ4Bjm7lg&s
+3,Zapatillas Deportivas,59.99,Hombre,https://plazavea.vteximg.com.br/arquivos/ids/28886334-512-512/20377132.jpg
+4,Pantalones de Jeans,39.99,Mujer,https://arocauniformes.com/wp-content/uploads/2021/07/PANTALON1.jpg
+5,Vestido de Verano,29.99,Mujer,https://hmperu.vtexassets.com/arquivos/ids/4529575/Vestido-largo-de-volantes---Verde-claro-Estampado---H-M-PE.jpg?v=638530057623600000
+6,Camisa de Oficina,22.99,Hombre,https://m.media-amazon.com/images/I/5186NeC7acL.jpg
+7,Reloj de Pulsera,129.99,Hombre,https://plazavea.vteximg.com.br/arquivos/ids/28477370-512-512/image-a8f7fed142514749b8ba9c59d8d638a2.jpg
+8,Bufanda de Lana,18.99,Mujer,https://www.shutterstock.com/image-photo/blue-warm-scarf-on-white-600nw-2303667055.jpg
+9,Botas de Invierno,79.99,Mujer,https://ae01.alicdn.com/kf/Sf5f41833d3474038bfd48a99a1bee67cn/Botines-de-tac-n-medio-para-mujer-calzado-de-invierno-zapatillas-con-plataforma-c-modas-peludas.jpg
+10,Gafas de Sol,34.99,Mujer,https://angler.com.pe/wp-content/uploads/2024/01/4.png
+11,Pijama de Algodón,87.6,Mujer,https://resources.claroshop.com/medios-plazavip/fotos/productos_sears1/original/4296977.jpg
+12,Leggings Deportivos,44.1,Mujer,https://cdn-images.farfetch-contents.com/16/67/65/38/16676538_32695636_600.jpg
+13,Camiseta sin Mangas,113.49,Mujer,https://i.ebayimg.com/thumbs/images/g/Io8AAOSw-f1mln9x/s-l1200.jpg
+14,Chaleco de Invierno,140.62,Mujer,https://media.gq.com.mx/photos/5f90f0732e0c232544d08018/master/w_1600%2Cc_limit/Chaleco%2520invernal%25203.jpg
+15,Camiseta Polo,108.02,Hombre,https://cdn.aboutstatic.com/file/images/7a5d2bf40e7fa1bb980a775ad8399d5d.png?bg=F4F4F5&quality=75&trim=1
+16,Sombrero de Ala Ancha,141.35,Hombre,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZdiHbgv9gq_TQtlHWsLon5JxsKYaFaf_Wrw&s
+17,Camisa Casual,73.11,Mujer,https://cdn.globalso.com/czsuxing/10-11.jpg
+18,Abrigo de Lluvia,110.75,Hombre,https://guantesterry.com/wp-content/uploads/2021/05/ABRIGO-LLUVIA-DELTAPLUS.jpg
+19,Jersey Deportivo,78.75,Mujer,https://baxu.mx/cdn/shop/products/LINEAMX_rojo-04_530x@2x.jpg?v=1700246267
+20,Traje de Baño,65.66,Hombre,https://oneill.pe/cdn/shop/files/Disenosintitulo_79_39df8bcb-9dcc-41b8-b193-537e865d2deb.png?v=1706571796&width=1200
+21,Gorra de Béisbol,85.64,Mujer,https://neweracap.pe/169794-home_default/Gorro-9Forty-MLB-New-York-Yankees-Flawless-Pink.jpg
+22,Bufanda de Invierno,46.05,Hombre,https://i.blogs.es/75fbdb/bufanda/450_1000.jpg
+23,Reloj Deportivo,73.81,Mujer,https://http2.mlstatic.com/D_Q_NP_745762-MLU77405337492_072024-O.webp
+24,Pantalones de Chándal,62.28,Mujer,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6T6rlzHW367NdpB6MbaKMD7pGXP6y42endA&s
+25,Zapatos de Vestir,65.16,Hombre,https://oechsle.vteximg.com.br/arquivos/ids/10180223-1000-1000/1562286.jpg?v=637950870230430000
+26,Bufanda de Seda,31.96,Hombre,https://m.media-amazon.com/images/I/71AvDbQjsPL._AC_UL1200_.jpg
+27,Traje de Baño,125.42,Hombre,https://http2.mlstatic.com/D_NQ_NP_902206-MPE53277683338_012023-O.webp
+28,Pantalones Formales,110.43,Mujer,https://http2.mlstatic.com/D_NQ_NP_961743-MLC71487693662_092023-O.webp
+29,Camiseta Gráfica,144.46,Hombre,https://m.media-amazon.com/images/I/B1ieKaTDQdL._CLa%7C2140%2C2000%7C71Q6H31ZBGL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_SL1500_.png
+30,Mochila Escolar,82.42,Hombre,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbGBaKreXMCOTi4Na26z-VRWwc5Dmr8SUvNQ&s
+31,Reloj Deportivo,97.32,Hombre,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1SvASHlrHNkjcwywMXtP6OAdRb8yeXEOhNQ&s
+32,Jersey de Punto,17.89,Mujer,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu4S1siT_w2kH8wj21j7zd1SXXgxLeIFR5ACTDAT--t1HmXs6g5bVYqparsmYvmIKWoH4&usqp=CAU
+33,Camiseta Polo,56.5,Hombre,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCWy09kSi4tiIBE1HIvDIyTRAa2kOUweSpaw&s
+34,Polo Clásico,114.09,Hombre,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaLimXi8XJM1v7dfZ6Cf08yzxdPQ4xPa08Jg&s
+35,Sandalias de Playa,132.53,Hombre,https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2023/06/02/16856729163883.jpg
+36,Chaleco de Lana,88.62,Mujer,https://pe.kunastores.com/cdn/shop/files/C10Y569P0000T8A0501-YESSICA-2023_1.jpg?v=1711065268&width=533
+37,Camiseta Gráfica,97.91,Mujer,https://images.footballfanatics.com/tour-de-france/tour-de-france-grande-boucgraphic-t-shit-womens_ss4_p-13371726+u-zrndsj1yxt7pvtg5c6rc+v-ced43bffa4df47af9ab286d62bc05468.jpg?_hv=2&w=900
+38,Sandalias de Playa,143.67,Mujer,https://bataperu.vtexassets.com/arquivos/ids/356857-800-auto?v=638296154000900000&width=800&height=auto&aspect=true
+39,Guantes de Invierno,46.23,Mujer,https://img.joomcdn.net/88885f7ab45eb2660317de26e13685c3c32f93ac_original.jpeg
+40,Bufanda de Invierno,60.91,Mujer,https://image.made-in-china.com/2f0j00khQUORBPazbc/Winter-Women-Scarf-Warm-Cashmere-Scarves-Women-Big-Square-Long-Scarves.jpg
+41,Gorro de Lana,29.22,Hombre,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9SjTVXpC6npr1YfItN3uw1FXIePbZSZQk2w&s
+42,Camiseta Gráfica,56.17,Hombre,https://i.ebayimg.com/images/g/Bq4AAOSwyf1bLk7c/s-l1200.jpg
+43,Camiseta Polo,114.05,Mujer,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVg9W0SuZxqDte9f_mTK6I46s_UnEkDadXDrvTV7WrtXkWJyzoLj5q5u9oRwCciU4hoPs&usqp=CAU
+44,Vestido de Noche,46.76,Mujer,https://m.media-amazon.com/images/I/51T2QZq3lZL._AC_UY1000_.jpg
+45,Camisa Casual,80.17,Hombre,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2B0hiqBUE6BOpAiQWixFDfW497NL7brXxg-kMePyM3y8OSw9W9o7RxsWLgenp_pJieSk&usqp=CAU
+46,Reloj Deportivo,130.99,Mujer,https://invicta.com.pe/cdn/shop/files/886678481996_201_1024x1024@2x.jpg?v=1717706376
+47,Camiseta sin Mangas,51.15,Mujer,https://m.media-amazon.com/images/I/51SYLJJPw-L._AC_UY1000_.jpg
+48,Jersey Deportivo,147.8S9,Mujer,https://http2.mlstatic.com/D_NQ_NP_901667-MLM72534021346_102023-O.webp
+49,Mochila Deportiva,97.26,Hombre,https://www.mundodeportivo.com/elrecomendador/comparativas/wp-content/uploads/2023/03/Comparativa-mochilas-deportivas-3.jpg
+50,Guantes de Invierno,124.22,Hombre,https://http2.mlstatic.com/D_NQ_NP_604144-MPE75912630939_042024-O.webp
+51,Sandalias de Playa,128.72,Hombre,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5kFDM8VuHgYZIIP2nO38YLaQlKKUsP1H9_A&s
+52,Reloj Deportivo,117.02,Mujer,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlCFflC0zlP9pCqYPMrjNQ-8XSy-li3r20rQ&s
+53,Camiseta sin Mangas,110.81,Mujer,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDd5nZKfNd07wMihfhkUvs37phlVl58lcheHg-vIjkt06-EijZ3uGVZxm2nyg4KepbWSE&usqp=CAU
+54,Chaleco de Invierno,56.13,Hombre,https://m.media-amazon.com/images/I/713tKCvnP7S._AC_SL1500_.jpg
+55,Polo Clásico,134.81,Mujer,https://rematexperu.com/cdn/shop/products/42_48694cdd-ec78-462c-a825-3f7b270d5f2e_533x.png?v=1675823990
+56,Mochila Escolar,24.86,Mujer,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWA7NrprUYMdZ4ZD-4qGdb1LH-ruWDiC2vsw&s
+57,Cinturón de Cuero,103.43,Mujer,https://valencia.com.pe/cdn/shop/files/CIDVAL2925002NT_943x943.jpg?v=1688565951
+58,Guantes de Cuero,41.36,Mujer,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsPdOE9wqM4F3ZJi4r2aZuycBw64f8AWeGpA&s
+59,Camiseta sin Mangas,92.48,Hombre,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8GhND_vreVLUhhis8dom22Fwhu2KAhof41Q&s
+60,Zapatos de Tacón,82.46,Mujer,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQH3YIti7WQsY-oUEnRHz5J2Zad3xTZX4IcNQ&s

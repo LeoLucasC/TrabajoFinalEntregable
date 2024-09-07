@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INICIO SESION | SENASHOP</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles2.css') }}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+  
+<body>
+  <div class="wrapper">
+    <form action="">
+      <div class="header">
+        <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo" class="logo">
+      </div>
+      <h3>Iniciar sesión</h3>
+      <div class="input-box">
+        <input type="text" placeholder="Usuario" required>
+        <i class='bx bxs-user'></i>
+      </div>
+      <div class="input-box">
+        <input type="password" placeholder="Contraseña" required>
+        <i class='bx bxs-lock-alt'></i>
+      </div>
+      <div class="remember-forgot">
+        <label><input type="checkbox">Recordarme</label>
+        
+      </div>
+      <button type="submit" class="btn">Iniciar Sesion</button>
+      <div class="register-link">
+        <p>¿No tienes una cuenta? <a href="#">Registrate</a></p>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
+
