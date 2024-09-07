@@ -88,19 +88,21 @@ header a{
 }
 .menu{
     width: 95%;
-    max-width: 850px;
+    max-width: 1000px;
     margin: 0 auto;
 }
-.logo-nav{
+.logo-nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start; /* Alinea el contenido hacia la izquierda */
     align-items: center;
     flex-wrap: wrap;
 }
-.logo{
+
+.logo {
     color: #f2f2f2;
     font-size: 30px;
     font-weight: 700;
+    margin-right: 0; /* Elimina el margen derecho si es necesario */
 }
 .menu-icon{
     display: none;

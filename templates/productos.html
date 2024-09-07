@@ -10,7 +10,7 @@
     <header>
       <div class="menu logo-nav">
         <a href="{{ url_for('index') }}" class="logo">
-            <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo de SENASHOP" style="height: 40px;">
+            <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo de SENASHOP">
 
         </a>
         <label class="menu-icon"><span class="fas fa-bars icomin"></span></label>
@@ -18,7 +18,9 @@
           <ul>
             <li><a href="{{ url_for('nosotros') }}">Nosotros</a></li>
             <li><a href="{{ url_for('productos') }}">Productos</a></li>
-            <li><a href="{{ url_for('login') }}">Iniciar sesion</a></li> <!--por ahora hasta crear el login--> 
+            
+
+
             <li class="search-icon">
               <input type="search" placeholder="Search">
               <label class="icon">
@@ -45,6 +47,12 @@
                 <a href="# {{ url_for('carrito') }}" id="procesar-pedido" class="button-pedido">Procesar Compra</a>
               </div>
             </li>
+            {% if usuario %}
+            <li>Hola, {{ usuario }}</li>
+            <li><a href="{{ url_for('logout') }}">Cerrar sesión</a></li>
+          {% else %}
+            <li><a href="{{ url_for('login') }}">Iniciar sesión</a></li>
+          {% endif %}
           </ul>
         </nav>
       </div>

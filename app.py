@@ -23,7 +23,7 @@ def carrito():
 def productos():
     productos_df = pd.read_csv('productos.csv')
     productos = productos_df.to_dict(orient='records')  # Convertir a una lista de diccionarios
-    return render_template('productos.html', productos=productos)
+    return render_template('productos.html', productos=productos, usuario=session.get('usuario'))
 
 @app.route('/contacto')
 def contacto():
@@ -61,7 +61,7 @@ def login():
 @app.route('/logout')
 def logout():
     session.pop('usuario', None)
-    return redirect(url_for('login'))
+    return redirect(url_for('index'))
 
 # Iniciar la aplicación
 if __name__ == '__main__':
