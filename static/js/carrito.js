@@ -205,4 +205,29 @@ class Carrito{
         document.getElementById('total').value = "S/. " + total.toFixed(2); // Muestra el total
     }
     
+    
 }
+document.addEventListener('DOMContentLoaded', function() {
+    const botonesComprar = document.querySelectorAll('.agregar-carrito');
+
+    botonesComprar.forEach(boton => {
+        boton.addEventListener('click', function(event) {
+            event.preventDefault();
+            const productoId = this.getAttribute('data-id');
+
+            // Hacer una solicitud a Flask para agregar el producto
+            fetch(`/agregar_al_carrito/${productoId}`)
+                .then(response => {
+                    if (response.ok) {
+                        console.log(`Producto con ID ${productoId} agregado al carrito`);
+                        // Puedes agregar aquí alguna lógica adicional, como actualizar la UI
+                    } else {
+                        console.error('Error al agregar el producto al carrito');
+                    }
+                })
+                .catch(error => console.error('Error en la solicitud:', error));
+        });
+    });
+});
+
+

@@ -59,27 +59,49 @@
     </header>
 
     <main>
-        <div class="modal" id="modal">
-          <div class="modal-content">
-            <img src="" alt="" class="modal-img" id="modal-img">
+      <div class="modal" id="modal">
+        <div class="modal-content">
+          <img src="" alt="" class="modal-img" id="modal-img">
+        </div>
+        <div class="modal-boton" id="modal-boton">X</div>
+      </div>
+      
+      <!-- Sección de compras basado en historial -->
+      <section class="historial-section">
+        <h2>Compras Basado en tu historial</h2>
+        <div class="historial">
+          {% for producto in historial_recomendaciones %}
+          <div class="producto">
+            <img src="{{ producto['url'] }}" alt="{{ producto['nombre'] }}">
+            <h4>{{ producto['nombre'] }}</h4>
+            <p>Precio: {{ producto['precio'] }}</p>
           </div>
-          <div class="modal-boton" id="modal-boton">X</div>
+          {% endfor %}
         </div>
-
+      </section>
+      
+      <!-- Sección de todos los productos -->
+      <section class="productos-section">
+        <h2>Productos Disponibles</h2>
         <div class="container-productos" id="lista-productos">
-            <!-- Iterar sobre la lista de productos cargados desde el CSV -->
-            {% for producto in productos %}
-            <div class="card">
-                <img src="{{ producto['url'] }}" class="card-img" alt="{{ producto['nombre'] }}">
-                <h5>{{ producto['nombre'] }}</h5>
-                <p>ID: {{ producto['id'] }}</p> <!-- Mostrar el ID -->
-                <p>Precio: S/<small class="precio">{{ producto['precio'] }}</small></p> <!-- Mostrar el Precio -->
-                <p>Sexo: {{ producto['sexo'] }}</p> <!-- Mostrar el campo 'sexo' -->
-                <a href="#" class="button agregar-carrito" data-id="{{ producto['id'] }}">Comprar</a>
-            </div>
-            {% endfor %}
+          {% for producto in productos %}
+          <div class="card">
+            <img src="{{ producto['url'] }}" class="card-img" alt="{{ producto['nombre'] }}">
+            <h5>{{ producto['nombre'] }}</h5>
+            <p>ID: {{ producto['id'] }}</p>
+            <p>Precio: S/<small class="precio">{{ producto['precio'] }}</small></p>
+            <p>Sexo: {{ producto['sexo'] }}</p>
+            <a href="{{ url_for('agregar_al_carrito', producto_id=producto['id']) }}" class="button agregar-carrito" data-id="{{ producto['id'] }}">Comprar</a>
+
+                     
+
+          </div>
+          {% endfor %}
         </div>
+      </section>
     </main>
+    
+    
 
     <footer class="footer-section">
       <div class="copyright-area">
