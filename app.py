@@ -1,14 +1,97 @@
-from flask import Flask, render_template, request, redirect, url_for, flash, session
+from flask import Flask, render_template, request, redirect, url_for, flash, session, send_file
 import pandas as pd
 import csv
+import matplotlib.pyplot as plt
+import io
 from datetime import datetime
+import os
+import base64
 
 app = Flask(__name__)
 app.secret_key = 'supersecretkey'
 
+# Ruta para guardar las gráficas
+GRAPHICS_DIR = os.path.join('static', 'img')
+
+def generar_grafica_compras():
+    compras_df = pd.read_csv('compras.csv')
+    
+    # Expandir la columna 'Historial' en una lista de IDs de productos
+    compras_df['Historial'] = compras_df['Historial'].apply(lambda x: [int(id) for id in x.split(',')])
+    
+    # Crear una lista de todos los IDs de productos comprados
+    producto_ids = [id for sublist in compras_df['Historial'] for id in sublist]
+    
+    # Contar la frecuencia de cada ID de producto
+    frecuencia_productos = pd.Series(producto_ids).value_counts()
+
+    # Obtener los 10 productos más comprados
+    top_10_productos = frecuencia_productos.head(10)
+    
+    # Leer datos del producto más comprado
+    productos_df = pd.read_csv('productos.csv')
+    producto_mas_comprado_id = top_10_productos.idxmax()
+    producto_mas_comprado_freq = top_10_productos.max()
+    
+    producto_mas_comprado = productos_df[productos_df['id'] == producto_mas_comprado_id].iloc[0]
+
+    plt.figure(figsize=(12, 8))
+    top_10_productos.plot(kind='bar', color='skyblue')
+    plt.title('Frecuencia de Compras de Productos (Top 10)')
+    plt.xlabel('ID del Producto')
+    plt.ylabel('Frecuencia de Compras')
+    plt.xticks(rotation=45)
+    
+    if not os.path.exists(GRAPHICS_DIR):
+        os.makedirs(GRAPHICS_DIR)
+    
+    file_path = os.path.join(GRAPHICS_DIR, 'grafica_compras.png')
+    plt.savefig(file_path)
+    plt.close()
+
+    return {
+        'id': producto_mas_comprado_id,
+        'nombre': producto_mas_comprado['nombre'],
+        'imagen': producto_mas_comprado['url'],
+        'frecuencia': producto_mas_comprado_freq
+    }
+
+
 @app.route('/')
 def index():
-    return render_template('index.html', usuario=session.get('usuario'))
+    grafica_info = generar_grafica_compras()
+    # Leer datos de compras y productos
+    compras_df = pd.read_csv('compras.csv')
+    productos_df = pd.read_csv('productos.csv')
+    
+    # Contar frecuencia de compras por producto
+    compras_df['Historial'] = compras_df['Historial'].apply(lambda x: list(map(int, x.split(','))))
+    all_products = [item for sublist in compras_df['Historial'] for item in sublist]
+    product_counts = pd.Series(all_products).value_counts()
+    
+    # Crear gráfica de frecuencia de compras
+    fig, ax = plt.subplots()
+    product_counts.plot(kind='bar', ax=ax)
+    ax.set_title('Frecuencia de Compras de Productos')
+    ax.set_xlabel('ID del Producto')
+    ax.set_ylabel('Frecuencia')
+    
+    # Guardar la gráfica en un objeto BytesIO
+    img = io.BytesIO()
+    plt.savefig(img, format='png')
+    img.seek(0)
+    graph_url = base64.b64encode(img.getvalue()).decode()
+    
+    # Determinar el producto más comprado
+    most_purchased_product_id = product_counts.idxmax()
+    most_purchased_product = productos_df[productos_df['id'] == most_purchased_product_id].iloc[0]
+    
+    return render_template(
+        'index.html',
+        usuario=session.get('usuario'),
+        graph_url=f'data:image/png;base64,{graph_url}',
+        most_purchased_product=most_purchased_product
+    )
 
 @app.route('/nosotros')
 def nosotros():

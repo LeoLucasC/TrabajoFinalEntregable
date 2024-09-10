@@ -71,7 +71,16 @@
         <img src="{{ url_for('static', filename='img/index.png') }}">
       </div>
     </div>
+    <h2>Frecuencia de Compras de Productos</h2>
+    <img src="{{ url_for('static', filename='img/grafica_compras.png') }}" alt="Gráfica de Compras">
 
+    <div class="product-info">
+      <h2>El producto que más compran los usuarios es:</h2>
+      <p>Nombre: {{ most_purchased_product.nombre }}</p>
+      <p>ID: {{ most_purchased_product.id }}</p>
+      <p>Precio: {{ most_purchased_product.precio }}</p>
+      <img src="{{ most_purchased_product.url }}" alt="Imagen del Producto" class="product-image">
+  </div>
   </div>
 
 

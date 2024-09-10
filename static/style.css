@@ -1,3 +1,37 @@
+
+/* Estilo para el contenedor de la información del producto */
+.product-info {
+    background-color: #ffffff; /* Fondo blanco para el contenedor */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    max-width: 300px; /* Ancho máximo */
+    text-align: center; /* Centrar el texto */
+    margin: 0 auto; /* Centrar el contenedor en su contenedor padre */
+}
+
+/* Estilo para el título */
+.product-info h2 {
+    font-size: 1.5em; /* Tamaño de fuente del título */
+    margin-bottom: 10px; /* Espaciado inferior */
+}
+
+/* Estilo para el texto */
+.product-info p {
+    font-size: 1em; /* Tamaño de fuente del texto */
+    margin: 5px 0; /* Espaciado vertical */
+}
+
+/* Estilo para la imagen del producto */
+.product-image {
+    max-width: 100%; /* Ajustar el ancho máximo a 100% del contenedor */
+    height: auto; /* Mantener la proporción de la imagen */
+    border-radius: 8px; /* Bordes redondeados */
+    margin-top: 10px; /* Espaciado superior */
+}
+
+
+
 /* Contenedor de la sección de historial */
 main {
     padding: 20px;
@@ -109,6 +143,7 @@ main {
     font-family: sans-serif;
     letter-spacing: 0.03em;
     line-height: 1.3;
+    text-align: center;
 }
 
 p{
