@@ -6,6 +6,9 @@ import io
 from datetime import datetime
 import os
 import base64
+from recomendacion import recomendar_productos
+from sklearn.neighbors import NearestNeighbors
+
 
 app = Flask(__name__)
 app.secret_key = 'supersecretkey'
@@ -113,6 +116,35 @@ def leer_usuarios_csv():
     except Exception as e:
         print(f"Error al leer usuarios.csv: {e}")
         return []
+
+def recomendar_productos(usuario_id):
+    # Cargar datos
+    compras_df = pd.read_csv('compras.csv')
+    productos_df = pd.read_csv('productos.csv')
+    
+    # Crear una matriz de usuarios-productos
+    usuarios_productos = compras_df[['id', 'Historial']].copy()
+    usuarios_productos['Historial'] = usuarios_productos['Historial'].apply(lambda x: [int(id) for id in x.split(',')])
+    usuarios_productos = usuarios_productos.explode('Historial')
+    usuarios_productos = pd.pivot_table(usuarios_productos, values='Historial', index='id', columns='Historial', fill_value=0)
+
+    # Modelo de k-Nearest Neighbors
+    modelo = NearestNeighbors(n_neighbors=10, metric='cosine')
+    modelo.fit(usuarios_productos.values)
+    
+    # Obtener recomendaciones
+    usuario_vector = usuarios_productos.loc[usuario_id].values.reshape(1, -1)
+    distancias, indices = modelo.kneighbors(usuario_vector)
+    
+    productos_recomendados = set()
+    for indice in indices.flatten():
+        productos_recomendados.update(usuarios_productos.iloc[indice].index[usuarios_productos.iloc[indice] > 0])
+    
+    # Filtrar productos recomendados
+    productos_recomendados = productos_df[productos_df['id'].isin(productos_recomendados)]
+    
+    return productos_recomendados
+
 
 @app.route('/productos')
 def productos():
